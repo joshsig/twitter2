@@ -1,0 +1,98 @@
+{
+    "users": [
+        {
+            "username": "piscopisco",
+            "pass": "123"
+        },
+        {
+            "username": "admin",
+            "pass": "123"
+        },
+        {
+            "username": "stephen",
+            "pass": "123"
+        }
+    ],
+    "tweets": [
+        {
+            "tweet_id": 140731716592520,
+            "tweet_str": "Hello friends",
+            "username": "piscopisco"
+        },
+        {
+            "tweet_id": 140734933951400,
+            "tweet_str": "I am so tired.",
+            "username": "admin"
+        },
+        {
+            "tweet_id": 4418224464,
+            "tweet_str": "HI",
+            "username": "piscopisco"
+        },
+        {
+            "tweet_id": 4418224496,
+            "tweet_str": "Hi stephen you sexy silly fuck",
+            "username": "piscopisco"
+        },
+        {
+            "tweet_id": 4543463792,
+            "tweet_str": "Hello friends",
+            "username": "piscopisco"
+        },
+        {
+            "tweet_id": 4521361808,
+            "tweet_str": "My father was a crack whore in the 80's, please dont tell yanna",
+            "username": "piscopisco"
+        },
+        {
+            "tweet_id": 4546281968,
+            "tweet_str": "Hi stephen! Glad to see you here, sorry about your retarded friend. he should off himself.",
+            "username": "piscopisco"
+        },
+        {
+            "tweet_id": 4375757328,
+            "tweet_str": "I don\u2019t have the heart to tell Liam his balls are too big for my liking. Can I get some advice on how to navigate these treacherous waters my friends?",
+            "username": "stephen"
+        },
+        {
+            "tweet_id": 4466016752,
+            "tweet_str": "I love twitter 2!",
+            "username": "admin"
+        },
+        {
+            "tweet_id": 4466016848,
+            "tweet_str": "Hello World",
+            "username": "piscopisco"
+        },
+        {
+            "tweet_id": 4466016880,
+            "tweet_str": "Hello World",
+            "username": "admin"
+        },
+        {
+            "tweet_id": 4305552016,
+            "tweet_str": "FUCK YOU STEVIE YOU STUPID SILLY JEWLOVING WHORE",
+            "username": "admin"
+        },
+        {
+            "tweet_id": 4518789712,
+            "tweet_str": "This app won't allow me to post pics of the travesty occurring in Gaza which is a 1st amendment violation and i won't stand for it!!!",
+            "username": "stephen"
+        },
+        {
+            "tweet_id": 4385063536,
+            "tweet_str": "I will not be silenced!!",
+            "username": "stephen"
+        },
+        {
+            "tweet_id": 4298179216,
+            "tweet_str": "Yenno, at this point the jews have killed 20,000+ Gazens and also Jesus, maybe the Germans had a point",
+            "username": "stephen"
+        },
+        {
+            "tweet_id": 4298179248,
+            "tweet_str": "I WILL NOT BE SILENCED!!!!",
+            "username": "stephen"
+        }
+    ]
+}
