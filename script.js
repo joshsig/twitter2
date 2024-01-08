@@ -2,30 +2,21 @@ function mainPage() {
     let loginContainer = document.getElementById("login-container");
     let tweetContainer = document.getElementById("tweet-container");
     let tweetList = document.getElementById("tweet-list");
+    let userDisplay = document.getElementById("user-display");
 
     // check if cookie exists
     if (document.cookie.indexOf("username=") !== -1) {
       // The cookie exists
       loginContainer.innerHTML = "";
-
-      tweetContainer.innerHTML = `<form id="new-tweet"> <label for="new-tweet">Add a new Tweet!</label><br> <input type="text" id="new-twt" value=" " name="new-twt"><input type="submit" id="add-tweet" value="Send it!" onClick="addTwt()"></form><input type="submit" value="Log out" onClick="logout()"><H2>Tweets</H2>
-      <form id="imageForm" enctype="multipart/form-data">
-      <input type="file" id="imageInput" accept="image/*" required>
-      <button type="button" onclick="uploadImage()">Upload Image</button>
-      </form>`;
+      tweetContainer.innerHTML = generateHomePage();
+      userDisplay.innerHTML = displayUser();
 
       getTweets();
     } else {
-      loginContainer.innerHTML = `<form id="login-form">
-        <label for="use-name">Username</label><br>
-        <input type="text" id="username" name="username" value=""><br>
-        <label for="password">Password</label><br>
-        <input type="text" id="password" name="password" value=""><br><br>
-        <input type="button" id="login-btn" value="Log in" onClick="login(this.form)">
-        </form>`;
-
+      loginContainer.innerHTML = generateLoginPage();
       tweetContainer.innerHTML = "";
       tweetList.innerHTML = "";
+      userDisplay.innerHTML = "";
     }
   }
 
@@ -91,13 +82,14 @@ function mainPage() {
 
     // Get the tweet text from the input field
     let tweetText = document.getElementById("new-twt");
-    // Get the username from the session cookie
-    var username = getSessionId();
     var twt = tweetText.value;
 
     if (twt === undefined) {
       return;
     }
+
+     // Get the username from the session cookie
+    var username = getSessionId();
 
     // Generate a new tweet object with a unique ID
     var newTweet = {
@@ -183,6 +175,37 @@ function mainPage() {
       ')">' +
       "</li>"
     );
+  }
+
+  function generateLoginPage() {
+    return `<form id="login-form">
+    <label for="use-name">Username</label><br>
+    <input type="text" id="username" name="username" value=""><br>
+    <label for="password">Password</label><br>
+    <input type="text" id="password" name="password" value=""><br><br>
+    <input type="button" id="login-btn" value="Log in" onClick="login(this.form)">
+    </form>`;
+  }
+
+
+  function generateHomePage() {
+    return `<div id="makeTweet"><form id="new-tweet"> <label for="new-tweet">Add a new Tweet!</label><br> <input type="text" id="new-twt" value=" " name="new-twt"><input type="submit" id="add-tweet" value="Send it!" onClick="addTwt()"></form><form id="imageForm" enctype="multipart/form-data">
+    <input type="file" id="imageInput" accept="image/*" required>
+    <button type="button" onclick="uploadImage()">Upload Image</button>
+    </div>
+    </form><H2>Tweets</H2>
+    `;
+  }
+
+  function displayUser() {
+
+    username = getSessionId();
+
+    if (username === "stephen") {
+      username = "owner of a big clit";
+    }
+
+    return `Logged in as: ${username}<input id="logout" type="submit" value="Log out" onClick="logout()">`
   }
 
   function getSessionId() {

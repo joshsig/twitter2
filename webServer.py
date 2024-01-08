@@ -64,7 +64,9 @@ def handle_request(client_socket, address):
     print(f"Connected by {address}")
     # Extract the path from the request
     if request:
+        
         path, method, body, protocol, cookie = parse_request(request)
+
         if method == "GET" and (path == "/" or path == "/index.html"):
 
             path = '/index.html'
@@ -97,13 +99,12 @@ def handle_request(client_socket, address):
             response = buildResponse(content)
 
         elif method == "POST" and path == "/api/images":
-            content_length = get_content_length(request_data)
-            body = client_socket.recv(content_length).decode('utf-8')
+            content_length = get_content_length(request)
             filename = str(uuid.uuid4()) + '.png'  # Assume the image is in PNG format
             filepath = os.path.join('images', filename)
 
             with open(filepath, 'wb') as image_file:
-                image_file.write(body.encode('utf-8'))
+                image_file.write(body.encode())
 
             response = "HTTP/1.1 200 OK\r\n\r\nImage uploaded successfully"
 

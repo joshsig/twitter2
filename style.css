@@ -159,3 +159,42 @@ h1 {
     display: flex;
     gap: 50px;
 }
+
+#imageInput {
+    padding: 8px;
+    font-size: 12px;
+    border-width: 2px;
+    border-color: #C7FFDA;
+    background-color: #deffe9;
+    color: #000000;
+    border-style: solid;
+    border-radius: 32px;
+    box-shadow: 3px 4px 16px rgba(66,66,66,.65);
+}
+
+#imageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#makeTweet {
+    display: flex;
+    background-color: var(--outline_dark);
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 2vh;
+}
+
+#logout {
+  margin-left: 20px;
+}
+
+#user-display {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  right: 0;
+}
